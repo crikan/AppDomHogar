@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">DomHogar</string>
+
+    <string name="lorem">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis risus nec nisl auctor,
+            id iaculis diam tempus. Mauris elementum tellus at consectetur mollis. In ac felis venenatis,
+            eleifend eros ut, ullamcorper urna. Aenean id scelerisque lorem.Maecenas imperdiet erat cursus,
+            vestibulum neque quis, hendrerit neque.Proin eu maximus libero. </string>
+    <string name="about_us">About Us</string>
+    <string name="our_services">Our Services</string>
+
+    <string name="decowifi_pack">DecoWifi Pack</string>
+    <string name="deco_wifi">Deco wifi for the whole house</string>
+    <string name="_100">100 €</string>
+
+    <string name="wifi_signal_expansion">Wifi Signal Expansion</string>
+    <string name="wifi_one_point">Wifi signal extension for a point in the house. The price is per household point that you want to expand</string>
+    <string name="_50">50 €</string>
+
+    <string name="smart_plugs_pack">Smart Plugs Pack</string>
+    <string name="seven_plugs">Price for 7 smart plugs to be installed in the appliances chosen by the customer</string>
+    <string name="_150">150 €</string>
+
+    <string name="smart_bulbs_pack">Smart Bulbs Pack</string>
+    <string name="smart_bulbs_install">For the sale and advice on the installation and operation of 6 light bulbs</string>
+
+    <string name="wifi_cams">Wifi Surveillance Cameras</string>
+    <string name="surv_cams">Instalation in 4 different rooms. Price per camera: € 50</string>
+    <string name="_200">200 €</string>
+    
+    <string name="prod_title1">WIFI DECODERS</string>
+    <string name="prod_desc1">TP-Link Deco E4 Sistem Wi-Fi Mesh Dual Band AC1200</string>
+
+    <string name="prod_title2">CAMERAS</string>
+    <string name="prod_desc2">LaView Wi-Fi cameras and systems</string>
+
+    <string name="prod_title3">LIGHT BULBS</string>
+    <string name="prod_desc3">A21WiFi Smart Led Light Bulb (100w Equi) Compatible with Alexa &amp; Google Home Remote App Controlled</string>
+
+    <string name="prod_title4">SMART PLUGS</string>
+    <string name="prod_desc4">Amysen WiFi Smart Plug Mini Outlet Compatible with Alexa &amp; Google Assistant</string>
+
+    <string name="prod_title5">REPEATERS</string>
+    <string name="prod_desc5">Huawei WS320 Wireless 802.11b/g/n WiFi Signal Repeater</string>
+
+
+</resources>
