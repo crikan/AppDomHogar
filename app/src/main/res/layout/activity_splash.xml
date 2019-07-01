@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente"
+    tools:context=".SplashActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:contentDescription="gif"
+        android:src="@drawable/homegif" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gif"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/krona_one"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="50sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.Holo.Light.ProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/titulo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="80dp"
+        android:indeterminate="false"
+        android:progressDrawable="@color/cardview_light_background"
+        android:progressTint="@color/cardview_light_background" />
+
+</RelativeLayout>

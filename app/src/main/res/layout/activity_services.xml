@@ -33,14 +33,13 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
+            android:layout_height="350dp"
             android:layout_gravity="bottom"
             android:layout_margin="30dp"
-            android:paddingStart="60dp"
-            android:paddingLeft="60dp"
-            android:paddingEnd="60dp"
-            android:paddingRight="60dp"
-            android:paddingBottom="30dp"
+            android:paddingStart="50dp"
+            android:paddingLeft="50dp"
+            android:paddingEnd="50dp"
+            android:paddingRight="50dp"
             android:scrollbars="horizontal"
             />
 

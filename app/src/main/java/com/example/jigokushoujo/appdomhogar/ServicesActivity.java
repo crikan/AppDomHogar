@@ -20,6 +20,8 @@ public class ServicesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
         getSupportActionBar().hide();
+
+
         mViewPager = (ViewPager)findViewById(R.id.viewPager);
 
         mCardAdapter = new MyAdapter();
