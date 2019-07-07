@@ -18,8 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
-/* TODO comentar https://android.jlelse.eu/custom-dialog-with-circular-reveal-animation-ef7dc77ba1e*/
-
 public class MainActivity extends AppCompatActivity {
 
     Button dom; //botón DOM
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide(); //oculta la barra superior
+        Objects.requireNonNull(getSupportActionBar()).hide(); //oculta la barra superior
 
         //----------------Funcionalidad de los botones---------------
         dom = (Button) findViewById(R.id.home_btn);
@@ -80,18 +78,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
-
-
     // este método crea el dialog y lo pone en visible o transparente según el resultado de sus comprobaciones
     private void showDiag() {
 
         final View dialogView = View.inflate(this, R.layout.dialog, null);
-        //creamos el objeto Dialog y lo damos un estilo personalizado
+        //creamos el objeto Dialog y le damos un estilo personalizado
         final Dialog dialog = new Dialog(this, R.style.MyAlertDialogStyle);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //creamos un dialog sin título
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //el título queda algo feo así que se quita
         dialog.setContentView(dialogView);
         //localizamos el botón de cerrar y le colocamos un listener
         ImageView imageView = (ImageView) dialog.findViewById(R.id.closeDialogImg);
@@ -103,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 revealShow(dialogView, false, dialog);
             }
         });
-
+        //mientras esté visible permanece a la escucha
         dialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface dialogInterface) {

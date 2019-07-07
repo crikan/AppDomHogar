@@ -15,7 +15,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/titulo_contacto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/krona_one"
@@ -23,89 +23,113 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="@color/colorAccent"
             android:textSize="30sp"
-            android:text="Fill this form and we will contact you" />
+            android:text="@string/we_will_contact" />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/name_surname"
+            style="@android:style/Widget.Material.Light.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:hint="Name and surname"
-            android:textColor="@color/colorAccent" />
+            android:hint="@string/name_and_surname"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/email"
+            style="@android:style/Widget.Material.Light.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:hint="email"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/colorAccent" />
+            android:hint="@string/email"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/phone"
+            style="@android:style/Widget.Material.Light.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Phone#"
-            android:inputType="phone" />
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="choose the services you are interested in"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/choose_the_services"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="@color/colorAccent"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/serv1"
+            style="@android:style/Widget.Material.Light.CompoundButton.CheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DecoWifi Pack" />
+            android:fontFamily="@font/actor"
+            android:text="DecoWifi Pack"
+            android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/serv2"
+            style="@android:style/Widget.Material.Light.CompoundButton.CheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wifi Signal Expansion" />
+            android:fontFamily="@font/actor"
+            android:text="Wifi Signal Expansion"
+            android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/serv3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Smart Plugs Pack" />
+            android:fontFamily="@font/actor"
+            android:text="Smart Plugs Pack"
+            android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/serv4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Smart Bulbs Pack" />
+            android:fontFamily="@font/actor"
+            android:text="Smart Bulbs Pack"
+            android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/checkBox5"
+            android:id="@+id/serv5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wifi Surveillance Cameras" />
+            android:fontFamily="@font/actor"
+            android:text="Wifi Surveillance Cameras"
+            android:textSize="16sp" />
 
         <Button
-            android:id="@+id/submit"
-            style="@android:style/Widget.Material.Light.Button.Small"
-            android:layout_width="match_parent"
+            android:id="@+id/submit_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="submit" />
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/krona_one"
+            android:text="submit"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/repgif"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="repetear"
+            android:src="@drawable/plug_gif" />
+
+
 
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:visibility="gone" />
 
 </RelativeLayout>

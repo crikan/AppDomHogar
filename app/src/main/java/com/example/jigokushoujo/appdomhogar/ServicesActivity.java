@@ -6,23 +6,24 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import java.util.Objects;
+
 public class ServicesActivity extends AppCompatActivity {
 
-    private ViewPager mViewPager;
     private MyAdapter mCardAdapter;
-    private ShadowTransformer mCardShadowTransformer;
-    private CardFragmentPagerAdapter mFragmentCardAdapter;
-    private ShadowTransformer mFragmentCardShadowTransformer;
-    private boolean mShowingFragments = false;
+
+    public ServicesActivity() {
+        boolean mShowingFragments = false;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
 
-        mViewPager = (ViewPager)findViewById(R.id.viewPager);
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.viewPager);
 
         mCardAdapter = new MyAdapter();
 
@@ -32,13 +33,15 @@ public class ServicesActivity extends AppCompatActivity {
         mCardAdapter.addCardItem(new CardItem( R.string.smart_bulbs_pack, R.string.smart_bulbs_install,R.string._100,R.drawable.bulbs));
         mCardAdapter.addCardItem(new CardItem( R.string.wifi_cams,R.string.surv_cams,R.string._200,R.drawable.cams));
 
-        mFragmentCardAdapter = new CardFragmentPagerAdapter(getSupportFragmentManager(),dpToPixels(2, this));
+        CardFragmentPagerAdapter mFragmentCardAdapter = new CardFragmentPagerAdapter(getSupportFragmentManager(), dpToPixels(2, this));
 
-        mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
-        mFragmentCardShadowTransformer = new ShadowTransformer(mViewPager, mFragmentCardAdapter);
+        MyTransformer mCardMyTransformer = new MyTransformer(mViewPager, mCardAdapter);
+        mCardMyTransformer.enableScaling(true);
+        MyTransformer mFragmentCardMyTransformer = new MyTransformer(mViewPager, mFragmentCardAdapter);
+        mFragmentCardMyTransformer.enableScaling(true);
 
         mViewPager.setAdapter(mCardAdapter);
-        mViewPager.setPageTransformer(false, mCardShadowTransformer);
+        mViewPager.setPageTransformer(false, mCardMyTransformer);
         mViewPager.setOffscreenPageLimit(3);
     }
 
