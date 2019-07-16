@@ -80,8 +80,8 @@ public class ContactActivity extends AppCompatActivity implements Validator.Vali
                 //validamos
                 validator.validate();
 
-                //nos conectamos con el script de php y le enviamos los datos ya validados
-                ejecutarServicio("https://domhogar.000webhostapp.com/android/androidConnector.php");
+                //nos conectamos con el script de php y le envia*mos los datos ya validados
+                ejecutarServicio("https://domhogar.000webhostapp.com/androidConnector.php");
             }
         });
     }
@@ -90,7 +90,7 @@ public class ContactActivity extends AppCompatActivity implements Validator.Vali
     //del éxito o fracaso de la validación. Para ello se opta por el uso de Toasts
     @Override
     public void onValidationSucceeded() {
-        Toast.makeText(this, "goood", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "sending info...", Toast.LENGTH_SHORT).show();
         //además de mostrar el Toast aprovechamos el momento para compbrobar los checkboxes y transformarlos
         //para ser transportados a la Base de Datos
         CheckBox serv1 = findViewById(R.id.serv1);
@@ -166,7 +166,7 @@ public class ContactActivity extends AppCompatActivity implements Validator.Vali
                 return params;
             }
         };
-        //para procesar nuestro ojeto stringRequest necesitaremos crear una cola de peticiones y añadirlo a la misma
+        //para procesar nuestro objeto stringRequest necesitaremos crear una cola de peticiones y añadirlo a la misma
         RequestQueue cola = Volley.newRequestQueue(ContactActivity.this);
         cola.add(stringRequest);
     }
