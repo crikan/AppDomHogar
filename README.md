@@ -17,6 +17,6 @@ Catálogo con carrusel de tarjetas
 ![catálogo](https://raw.githubusercontent.com/crikan/AppDomHogar/master/appCapturas/catalogo.JPG)
 
 Formulario de contacto
-![contact](https://raw.githubusercontent.com/AppDomHogar/master/appCapturas/contact.JPG)
+![contact](https://raw.githubusercontent.com/crikan/AppDomHogar/master/appCapturas/contact.JPG)
 
 La aplicación de escritorio en Java se puede ver aquí https://github.com/mgcmaria/DomHogar_v2
